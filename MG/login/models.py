@@ -8,3 +8,6 @@ class Post(models.Model):
     content = models.TextField()
     date_visited = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.NOT_PROVIDED)
+
+    def __str__(self):
+        return self.title
